@@ -92,6 +92,7 @@ function setPoint(map){
 	});
 }
 
+// Ini User
 function createPoint(evt){
 	var point = map.getCoordinateFromPixel(evt.pixel);
 	lonLatUser = ol.proj.toLonLat(point); 
@@ -109,6 +110,7 @@ function createPoint(evt){
 	markerCreate.getSource().addFeature(marker_);
 	markerCreate.setMap(map); 
 }
+// Akhir User
 
 function getStatus(lonLat){
 	var status = "-";
@@ -121,6 +123,8 @@ function getStatus(lonLat){
 	return status;
 }
 
+
+// Bobot Kondisi
 function getDataWeight(status){
 	if (status=="SANGAT AMAN") return 1;
 	else if (status=="AMAN") return 0.9;
@@ -128,6 +132,8 @@ function getDataWeight(status){
 	else if (status=="SANGAT RAWAN") return 0.5;
 	else if (status=="WASPADA") return 0.1;
 }
+// Akhir Bobot Kondisi
+
 
 function getDistance(point1, point2){
 	var location_1 = ol.proj.fromLonLat([point1[0], point1[1]]);
@@ -185,6 +191,7 @@ function setData(){
 	});
     }
 }
+
 
 function setAjax(){
         var xhr = new XMLHttpRequest();
