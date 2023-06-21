@@ -13,11 +13,11 @@ class PSORute{
     var $pBest = [];
     var $GBest = [];
     //cPartikel adalah jumlah posisi
-    const cPartikel = 500;
+    const cPartikel = 50;
     const p = 0.75;
     const r1 = 0.4;
     const r2 = 0.6;
-    const maxIterasi = 1000;
+    const maxIterasi = 100;
 
     function __construct($inCDimensi, $inPoint, $inDistance, $inLinks, $inDestination, $weight) { 
         $this->setDistance($inDistance);
