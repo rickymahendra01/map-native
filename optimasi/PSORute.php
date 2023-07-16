@@ -17,7 +17,7 @@ class PSORute{
     const p = 0.75;
     const r1 = 0.4;
     const r2 = 0.6;
-    const maxIterasi = 100;
+    const maxIterasi = 1000;
 
     function __construct($inCDimensi, $inPoint, $inDistance, $inLinks, $inDestination, $weight) { 
         $this->setDistance($inDistance);

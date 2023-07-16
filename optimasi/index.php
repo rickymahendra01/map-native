@@ -175,7 +175,7 @@
         </script>
     </head>
     <body>
-        <div id="map" style="width: 100%; height: 800px; display: inline-block;"></div>
+        <div id="map" style="width: 100%; height: 700px; display: inline-block;"></div>
         <a href="#" onclick="setShowData();" class="btn btn-primary1 btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow fixed-button" role="button">
             <i class="fa fa-share"></i>&nbsp;<span class="font-poppins">Cari Rute</span>
         </a>
