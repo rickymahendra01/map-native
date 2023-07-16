@@ -27,6 +27,102 @@
         <title>getData</title>
         <script src="../assets/openLayers/dist/ol.js"></script>
         <link rel="stylesheet" href="../assets/openLayers/ol.css" type="text/css">
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            }
+
+            .btn:disabled,
+            .btn.disabled,
+            fieldset:disabled .btn {
+            pointer-events: none;
+            opacity: 0.65;
+            }
+
+            .btn-primary1 {
+            color: #FFFEFE;
+            font-family: "Poppins", sans-serif;
+            background-color: #0199f1;
+            border-color: #0199f1;
+            border-radius: 10px;
+            width: 140px; /* Atur lebar sesuai kebutuhan */
+            height: 40px; /* Atur tinggi sesuai kebutuhan */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .btn-primary1:hover {
+            color: #FFFEFE;
+            background-color: #0199f1;
+            border-color: #0199f1;
+            }
+
+            .fixed-button {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            background-color: #0199f1;
+            color: #FFFEFE;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+            }
+
+            .fixed-button i {
+            margin-right: 5px;
+            }
+
+            .fixed-button:hover {
+            transform: scale(1.1);
+            }
+
+            .scroll-div {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px; /* Atur lebar sesuai kebutuhan */
+            height: 200px; /* Atur tinggi sesuai kebutuhan */
+            overflow: scroll;
+            border: 1px solid #333;
+            background-color: #fff; /* Atur warna latar belakang solid */
+            }
+
+            .scroll-div1 {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 300px; /* Atur lebar sesuai kebutuhan */
+            height: 200px; /* Atur tinggi sesuai kebutuhan */
+            overflow: scroll;
+            border: 1px solid #333;
+            background-color: #fff; /* Atur warna latar belakang solid */
+            }
+
+            .result {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            height: 380px; /* Atur tinggi sesuai kebutuhan */
+            background-color: #f2f2f2; /* Warna latar belakang untuk result */
+            }
+
+            .directions-panel {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #e6e6e6; /* Warna latar belakang untuk directions-panel */
+            }
+
+            .placeholder {
+            color: #999; /* Warna teks placeholder */
+            }
+        </style>
         <script>
             var waypoints = new Array();
             var shelters = new Array();
@@ -79,14 +175,11 @@
         </script>
     </head>
     <body>
-        <div id="map" style="width: 55%; height: 600px; display: inline-block;"></div>
-        <div style="width:40%; display: inline-block; vertical-align: top;">
-            <img src="waypoint.png"> waypoint | <img src="shelter.png"> shelter<br>
-            <label>Silahkan pilih titik awal kemudian klik dapatkan data</label><br>
-            Titik Awal : <label id='titikAwal'></label><br>
-            <a href="#" onclick="setShowData();">Dapatkan Data dan Telusuri Rute Terbaik</a>
-            <div id="result" style="width: 100%; height: 600px; overflow: scroll; border: 1px solid #333;"></div>
-        </div>
+        <div id="map" style="width: 100%; height: 800px; display: inline-block;"></div>
+        <a href="#" onclick="setShowData();" class="btn btn-primary1 btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow fixed-button" role="button">
+            <i class="fa fa-share"></i>&nbsp;<span class="font-poppins">Cari Rute</span>
+        </a>
+        <div id="result" class="scroll-div1 result" placeholder="Result"></div>
         <script src="./script.js"></script>
     </body>
 </html>

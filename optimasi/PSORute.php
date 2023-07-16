@@ -91,6 +91,7 @@ class PSORute{
     function setInitPosition(){
         //Random 
         $this->position = [];
+        
         for ($i=0;$i<PSORute::cPartikel;$i++){
             $this->position[$i] = [];
             for($j=0;$j<$this->cDimensi;$j++){
